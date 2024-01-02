@@ -37,3 +37,7 @@ The Markdown Bullet Capitalizer is a Visual Studio Code extension designed to en
 ## Contributing
 
 - Contributions are welcome! Please fork the repository and submit pull requests with any improvements or bug fixes.
+
+## License
+
+- [MIT License](LICENSE.md)

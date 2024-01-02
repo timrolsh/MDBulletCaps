@@ -1,13 +1,13 @@
 {
     "name": "mdbulletcaps",
     "displayName": "MDBulletCaps",
-    "description": "An extension that converts ASCIIMath to Latex on the go inside of Markdown files.",
+    "description": "An extension that capitalizes bullet points inside of Markdown files.",
     "publisher": "timrolsh",
     "repository": {
         "type": "git",
         "url": "https://github.com/timrolsh/MDBulletCaps"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.85.0"
     },

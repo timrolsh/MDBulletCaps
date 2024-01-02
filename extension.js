@@ -14,8 +14,44 @@ function activate(context) {
             }
         }
     });
-
     context.subscriptions.push(disposable);
+
+    let command = vscode.commands.registerCommand(
+        "extension.capitalizeMarkdownList",
+        () => {
+            capitalizeListItems();
+        }
+    );
+    context.subscriptions.push(command);
+}
+
+function capitalizeListItems() {
+    if (!editor) {
+        return;
+    }
+    const document = editor.document;
+    editor.edit((editBuilder) => {
+        for (let i = 0; i < document.lineCount; i++) {
+            const line = document.lineAt(i);
+            if (
+                line.text.trim().startsWith("* ") ||
+                line.text.trim().startsWith("- ")
+            ) {
+                const capitalizedText = line.text.replace(
+                    /(\* |- )([a-z])/g,
+                    (match, p1, p2) => {
+                        return p1 + p2.toUpperCase();
+                    }
+                );
+
+                const range = new vscode.Range(
+                    line.range.start,
+                    line.range.end
+                );
+                editBuilder.replace(range, capitalizedText);
+            }
+        }
+    });
 }
 
 function handleTextChange(change) {

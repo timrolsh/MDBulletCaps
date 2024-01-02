@@ -1,6 +1,6 @@
 {
-    "name": "markdownbulletcapitalizer",
-    "displayName": "MarkdownBulletCapitalizer",
+    "name": "mdbulletcaps",
+    "displayName": "MDBulletCaps",
     "description": "An extension that converts ASCIIMath to Latex on the go inside of Markdown files.",
     "version": "0.0.1",
     "engines": {

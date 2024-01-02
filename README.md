@@ -1,65 +1,39 @@
-# mdbulletcaps README
+# Markdown Bullet Capitalizer
 
-This is the README for your extension "mdbulletcaps". After writing up a brief description, we recommend including the following sections.
+## Overview
+
+The Markdown Bullet Capitalizer is a Visual Studio Code extension designed to enhance the editing experience in Markdown files. It automatically capitalizes the first letter after bullet points, and provides a command to capitalize all such characters in an existing file.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+1. **Automatic Capitalization On-the-Go:**
+   - When typing in a Markdown file, the extension automatically capitalizes the first character following `*` or `-` bullet points.
+2. **Capitalization Command for Entire File:**
+   - A command is available to capitalize the first character after all `*` or `-` bullet points throughout the current Markdown file.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
 
-\!\[feature X\]\(images/feature-x.png\)
+### Automatic Capitalization
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- Just type as usual in your Markdown file.
+- When you create a bullet point using `*` or `-` and type a character right after, the extension will automatically capitalize it.
+
+### Capitalize Entire File
+
+- Open a Markdown file in VSCode.
+- Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
+- Type and select "Capitalize Markdown List Items".
+- This will capitalize the first character of all list items in the document.
+
+## Installation
+
+- Install the extension from the Visual Studio Code Marketplace.
+- Once installed, it will automatically activate when you open Markdown files.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code 1.x
 
-## Extension Settings
+## Contributing
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Contributions are welcome! Please fork the repository and submit pull requests with any improvements or bug fixes.

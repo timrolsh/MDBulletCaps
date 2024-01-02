@@ -21,6 +21,12 @@ function activate(context) {
 function handleTextChange(change) {
     const newText = change.text;
     const startPosition = change.range.start;
+    const editor = vscode.window.activeTextEditor;
+
+    if (!editor) {
+        return;
+    }
+
     const lineText = editor.document.lineAt(startPosition.line).text;
 
     if (
@@ -34,7 +40,11 @@ function handleTextChange(change) {
         );
         if (precedingChars === "* " || precedingChars === "- ") {
             const capitalized = newText.toUpperCase();
-            const range = new vscode.Range(startPosition, change.range.end);
+            // Define the range to cover only the lowercase character
+            const range = new vscode.Range(
+                startPosition, // End of the range is at the cursor position
+                startPosition.translate(0, 1) // Start of the range is one character back
+            );
 
             editor.edit((editBuilder) => {
                 editBuilder.replace(range, capitalized);

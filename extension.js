@@ -1,10 +1,10 @@
 const vscode = require("vscode");
-const editor = vscode.window.activeTextEditor;
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+    const editor = vscode.window.activeTextEditor;
     let disposable = vscode.workspace.onDidChangeTextDocument((event) => {
         if (editor && event.document === editor.document) {
             const changes = event.contentChanges;
@@ -26,6 +26,7 @@ function activate(context) {
 }
 
 function capitalizeListItems() {
+    const editor = vscode.window.activeTextEditor;
     if (!editor) {
         return;
     }
